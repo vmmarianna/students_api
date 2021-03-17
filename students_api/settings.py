@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'students_api.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
-if os.environ.get('postgres_ready'):
+if not os.environ.get('postgres_ready'):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',

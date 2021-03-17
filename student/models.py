@@ -10,6 +10,7 @@ class Prof(models.Model):
 
 class Student(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
+    created_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return f'Student: <{self.pk}> {self.name}'
