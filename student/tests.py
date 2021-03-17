@@ -9,4 +9,4 @@ class TestSimple(TestCase):
             name="Test_Name"
         )
 
-        self.assertGreater(0, Student.objects.count())
+        self.assertLess(0, Student.objects.count())
